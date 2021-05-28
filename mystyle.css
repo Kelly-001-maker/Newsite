@@ -1,0 +1,413 @@
+
+body{
+	margin: 0;
+	font-family: sans-serif;
+}
+.policybody{
+  background-color: #fffafa
+}
+.paragraph{
+  padding-left: 20px;
+  }
+.phead{
+  text-align: center;
+}
+.formbody{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.myform{
+	padding-left: 20px;
+
+}
+.mybody{
+background-image:url('1.jpg');/* width="460" height="345";*/
+background-repeat: no-repeat;
+}
+.mybutton{
+	margin-left: 20px;
+}
+.mybtn{
+	float:right;
+}
+.myheader{
+	text-align: center;
+}
+
+.header {
+  background-color: lightblue;
+  text-align: center;
+  padding: 20px;
+}
+
+.button {
+ background-color: #1e90ff;/* Green */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+}
+.button:hover{
+   background-color: #56A5EC;
+}
+
+
+/* The navbar container */
+.topnav {
+  overflow: hidden;
+  background-color: green;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: #FF0000;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+/* Style the footer */
+.footer-main {
+	margin-top: 20px;
+
+}
+.loginbody{
+    margin: 0;
+    padding: 0;
+    background: url(1.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+        
+}
+.loginbox{
+    width: 320px;
+    height: 420px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+        
+}
+.head1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb25;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+    
+}
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: hotpink;
+}
+.space{
+  margin-left: 20px;
+}
+.loginbox a:hover
+{
+    color: #ffc107;
+    
+}
+input[type=text], input[type=email], input[type=date],input[type=password],select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=text]:focus,input[type=email]:focus,input[type=date]:focus,input[type=password]:focus, select:focus{
+  background-color: lightblue;
+}
+
+
+input[type=submit] {
+  width: 100%;
+  background-color: #1e90ff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #56A5EC;
+}
+.checkb{
+  color: blue;
+}
+
+.formdiv{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  align-content: center;
+  padding: 20px;
+}
+
+.menu-bar
+{
+    background-color: green;
+    text-align: center;
+    
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+.menu-bar ul li
+{
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: #fff;
+}
+.active, .menu-bar ul li:hover
+{
+    background: #1e90ff;
+    border-radius: 3px;
+}
+.menu-bar .fa
+{
+    margin-right: 8px;
+    
+}
+.sub-menu-1
+{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background-color: black;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color: dodgerblue;
+}
+img{
+  max-width: 10%;
+  float:left;
+}
+
+
+
+.box{
+    
+    margin:10px;
+    background: #a0a0a0;
+    border-radius: 7px;
+    box-shadow: 1px 2px 4px #fff
+    
+}
+.box .heading{
+    background: #ff4500;
+    border-radius: 7px 7px 8px 8px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-family: "Rubik";
+}
+.faqs{
+    padding: 0px 20px 20px;
+}
+
+::-webkit-details-marker{
+    float: right;
+    margin-top: 3px;
+}
+.details{
+    background-color: ivory;
+    padding: 10px;
+    border-radius: 7px;
+    margin-top: 20px;
+    font-family: "Rubik";
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+details summary{
+    outline: none;
+}
+.text{
+    color: white;
+}
+
+.box{
+    margin: 20px;
+    background: #a0a0a0;
+    border-radius: 7px;
+    box-shadow: 1px 2px 4px #fff;
+        
+    
+}
+.box .heading{
+    font-family: fantasy;
+    color: #ff4500;
+}
+#parent{
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    
+}
+#parent > li{
+    display: inline-block;
+    width: 33%;
+    height: 100%;
+    background-color: #ff4500;
+    border-radius: 5px;
+     margin-bottom: 5px;
+}
+.box2{
+    margin: 20px;
+    background: #a0a0a0;
+    border-radius: 7px;
+    box-shadow: 1px 2px 4px #fff;
+    height: 160px;
+}
+.my_box{
+  background: #a0a0a0;  
+}
+        
+#parent2{
+    list-style: none;
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    
+}
+#parent2 > li{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background-color: #ff4500;
+     border-radius: 5px;
+
+}
+
+}
+
+}
+.investbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 45px;
+    background: #ff4500;
+    color: brown;
+    font-size: 18px;
+    border-radius: 20px;
+    
+}
+.investbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+    
+}
+
