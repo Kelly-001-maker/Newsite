@@ -1,0 +1,110 @@
+body{
+	background: #a5d8f3;
+}
+.circle{
+	width: 150px;
+	margin:  20px auto;
+}
+.circle img{
+	border-radius: 50%;
+	
+}
+.box{
+	background: white;
+	width: 630px;
+	margin: 20px auto;
+	border-radius: 7px;
+	height: 110px;
+	text-align: center;
+}
+.box2{
+	background: white;
+	width: 630px;
+	margin: 20px auto;
+	border-radius: 7px;
+	height: 110px;
+	text-align: center;
+}
+.box3{
+	background: white;
+	width: 630px;
+	margin: 20px auto;
+	border-radius: 7px;
+	height: 110px;
+	text-align: center;
+}
+.box4{
+	background: white;
+	width: 630px;
+	margin: 20px auto;
+	border-radius: 7px;
+	height: 110px;
+	text-align: center;
+}
+.box5{
+	background: white;
+	width: 630px;
+	margin: 20px auto;
+	border-radius: 7px;
+	height: 110px;
+	text-align: center;
+}
+.box6{
+	background: white;
+	width: 630px;
+	margin: 20px auto;
+	border-radius: 7px;
+	height: 110px;
+	text-align: center;
+}
+.box7{
+	background: white;
+	width: 630px;
+	margin: 20px auto;
+	border-radius: 7px;
+	height: 110px;
+	text-align: center;
+}
+.box8{
+	background: white;
+	width: 630px;
+	margin: 20px auto;
+	border-radius: 7px;
+	height: 110px;
+	text-align: center;
+}
+.box9{
+	background: white;
+	width: 630px;
+	height: 110px;
+	text-align: center;
+	margin: 20px auto;
+	border-radius: 7px;
+}
+.box10{
+	background: white;
+	width: 630px;
+	height: 110px;
+	text-align: center;
+	margin: 20px auto;
+	border-radius: 7px;
+}
+.box11{
+	background: white;
+	width: 630px;
+	margin: 20px auto;
+	border-radius: 7px;
+	height: 110px;
+	text-align: center;
+}
+.wrapper{
+	width: 630px;
+	height: 50px;
+	margin: 40px auto;
+	background: red;
+}
+.center-justified{
+	text-align: justify;
+	margin: o auto;
+	width: 30em;
+}
