@@ -1,61 +1,162 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<!-- Basic -->
+
 <head>
-	<link rel="stylesheet" href="mystyle.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-">
-	<meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Obuntu crypto</title>
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>Omagcrypto Investment</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/mybit.png" type="image/x-icon">
+    <link rel="mybit" href="images/mybit.png">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
-<body class="formbody">
-  <div class="header">
 
-     <h1>Omagcrypto Investment</h1>
-  
-  </div>
-  <div><h1 class="space" style="color:green">Welcome to Omagcrypto</h1></div>
-  <div><h5 class="space">Enter your details below</h5></div>
-  <div class="formdiv">
-   <form class="myform">
-     <label for="fname">First name:</label><br>
-     <input type="text" id="fname" name="fname" placeholder="First name"><br>
-     <label for="mname">Middle name:</label><br>
-     <input type="text" id="mname" name="mname" placeholder="Middle name"><br>
-     <label for="lname">Last name:</label><br>
-     <input type="text" id="lname" name="lname" placeholder="Last name"><br>
-     <label for="mname">Birth Date:</label><br>
-     <input type="date" id="dob" name="dob" placeholder="D.O.B"><br>
-     <label for="mname">Email address:</label><br>
-     <input type="email"  id="email" name="email" placeholder="email adress"><br>
-     <label for="country">Select country:</label><br>
-     <select name="country" id="country">
-        <option value="country">Kenya</option>
-        <option value="country">Uganda</option>
-        <option value="country">Tanzania</option>
-        <option value="country">Ethiopia</option>
-        <option value="country">Somalia</option>
-        <option value="country">Sudan</option>
-        <option value="country">South Sudan</option>
-        <option value="country">Rwanda</option>
-     </select><br>
-     <label for="username">Username:</label><br>
-     <input type="text" id="username" name="username"><br>
-     <label for="pwd">Password:</label><br>
-     <input type="password" id="pwd" name="pwd" placeholder="Password"><br><br>
-     <input type="checkbox" id="policy" name="policy" value="policy">
-     <label for="policy" class="checkb">I have read and agree to the <a href="privacy_policy.html" class="checklink">Privacy Policy</a> Agreement</label><br><br>
-      <input type="checkbox" id="terms" name="terms" value="terms">
-     <label for="terms" class="checkb">I have read and agree to the <a href="Terms_and_conditions.html" class="checklink">terms and condition</a> agreement</label><br><br>
-     <input type="submit" value="Sign Up"><br><br>
-     <label>Already have an account <a href="login.html" class="button">Login</a></label>
-    </form> 
-  </div>
-  <div class="footer">
-  <p style="color:white">All Rights Reserved </p>
-  <p style="color:white">@omagcrypto2021</p>
-</div>
+<body>   
+            <!-- Start registration  -->
+    <div class="contact-box-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-12">
+                    <div class="contact-form-right">
+                         <h2 style="color:green">Welcome  to Omagcrypto invest</h2>
+                        <p>Enter your details below</p>
+                        <form id="contactForm" action = "login.html">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="first Name" required data-error="Please enter first name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                  <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="midlle_name" name="middle_name" placeholder="middle Name" required data-error="Please enter middle name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="last Name" required data-error="Please enter last name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="date" class="form-control" id="dob"  name="dob" placeholder="Date of Birth"  required data-error="Please enter validdate of birth">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                   
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                           <select name="country" id="country" class="form-control" placeholder="select country" required data-error="Please select your country">>
+                                              <option value="country">Kenya</option>
+                                              <option value="country">Uganda</option>
+                                              <option value="country">Tanzania</option>
+                                              <option value="country">Ethiopia</option>
+                                              <option value="country">Somalia</option>
+                                              <option value="country">Sudan</option>
+                                              <option value="country">South Sudan</option>
+                                              <option value="country">Rwanda</option>
+                                              <option value="country">Burundi</option>
+                                              <option value="country">Djibouti</option>
+                                              <option value="country">Eritrea</option>
+                                            </select>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Username" required data-error="Please enter your Username">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="password" id="pwd" name="pwd" placeholder="Password" required data-error="Please enter valid password">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="checkbox" id="policy" name="policy" value="policy">
+                                       <label for="policy" class="checkb">I have read and agree to the <a href="privacy_policy.html" class="checklink">Privacy Policy</a> Agreement</label> <br>
+                                         <input type="checkbox" id="terms" name="terms" value="terms">
+                                        <label for="terms" class="checkb">I have read and agree to the <a href="Terms_and_conditions.html" class="checklink">terms and condition</a> agreement</label>
+                                    </div>
+                                </div>
+                                    <div class="submit-button text-center">
+                                        <input class ="button" type="submit" value="Sign Up">
+                  
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                        <label>Already have an account <a href="login.html" class="button">Login</a></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- end registration  --> 
+
+ <!-- Start copyright  -->
+    <div class="footer-copyright">
+        <p class="footer-company">All Rights Reserved. &copy; 2021 <a href="#">Omagcrypto</a> Design By :
+            <a href="https://html.design/">Omag Group</a></p>
+    </div>
+    <!-- End of copyright  -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/jquery.superslides.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/inewsticker.js"></script>
+    <script src="js/bootsnav.js."></script>
+    <script src="js/images-loded.min.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/baguetteBox.min.js"></script>
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/custom.js"></script>
 </body>
+
 </html>

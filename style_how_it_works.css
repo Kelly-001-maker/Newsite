@@ -1,0 +1,108 @@
+body{
+   background: #a5d8f3; 
+}
+
+.boxB{
+	background: white;
+	width: 1020px;
+	margin: 20px auto;
+	border-radius: 7px;
+	height: 190px;
+}
+.boxC{
+	background: white;
+	width: 1020px;
+	margin: 20px auto;
+	border-radius: 7px;
+	height: 120px;
+}
+.boxD{
+	background: white;
+	width: 1020px;
+	margin: 20px auto;
+	border-radius: 7px;
+	height: 120px;
+	
+}
+.boxE{
+	background: white;
+	width: 1020px;
+	margin: 20px auto;
+	border-radius: 7px;
+	height: 120px;
+}
+.boxF{
+	background: white;
+	width: 1020px;
+	margin: 20px auto;
+	border-radius: 7px;
+	height: 120px;
+}
+
+}
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container{
+    position: relative;
+    width: 630px;
+    margin: 100px auto;
+    border-radius: 7px;
+    height: 60px;
+}
+.click{
+    background-color: #00feca;
+}
+.click:hover{
+    background-color: #fdf200;
+    color: #000;
+    
+}
+.click,.links{
+    padding: 12px;
+    font-size: 1.2em;
+    font-family: futura Md BT;
+    border: none;
+    outline: none;
+    width: 630px;
+    color: #a5d8f3;
+    transition: 0.3s;
+	box-shadow: #a5d8f3;
+}
+
+
+.investbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: grey;
+    color: white;
+    font-size: 15px;
+    border-radius: 40px;
+    
+}
+.investbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: red;
+    color: #000;
+    
+}
+.center-justified
+{
+    text-align: justify;
+    margin: 0 auto;
+    width: 30em;
+}
+.boxA{
+	width: 1020px;
+	margin: 20px auto;
+	background: white;
+	border-radius: 7px;
+	height: 90px;
+}
