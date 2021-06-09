@@ -37,6 +37,20 @@
 </head>
 
 <body>   
+<script>
+
+  function checkForm(form)
+  {
+    ...
+    if(!form.terms.checked) {
+      alert("Please indicate that you accept the Terms and Conditions");
+      form.terms.focus();
+      return false;
+    }
+    return true;
+  }
+
+</script>
             <!-- Start registration  -->
     <div class="contact-box-main">
         <div class="container">
@@ -45,8 +59,11 @@
                     <div class="contact-form-right">
                          <h2 style="color:green">Welcome  to Omagcrypto invest</h2>
                         <p>Enter your details below</p>
-                        <form id="contactForm" action = "login.html">
-                            <div class="row">
+                        <form  action = "login.html" onsubmit="return checkForm(this);">
+
+                            <div id="contactForm">
+                              
+                                 <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="first_name" name="first_name" placeholder="first Name" required data-error="Please enter first name">
@@ -80,7 +97,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                           <select name="country" id="country" class="form-control" placeholder="select country" required data-error="Please select your country">>
+                                           <select name="country" id="country" class="form-control" placeholder="select country" required data-error="Please select your country">
                                               <option value="country">Kenya</option>
                                               <option value="country">Uganda</option>
                                               <option value="country">Tanzania</option>
@@ -109,7 +126,7 @@
                                     </div>
                                     <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="checkbox" id="policy" name="policy" value="policy">
+                                        <input type="checkbox" id="policy" name="terms" value="policy">
                                        <label for="policy" class="checkb">I have read and agree to the <a href="privacy_policy.html" class="checklink">Privacy Policy</a> Agreement</label> <br>
                                          <input type="checkbox" id="terms" name="terms" value="terms">
                                         <label for="terms" class="checkb">I have read and agree to the <a href="Terms_and_conditions.html" class="checklink">terms and condition</a> agreement</label>
@@ -124,6 +141,9 @@
                                     </div>
                                 </div>
                             </div>
+
+                            </div>
+                            
                         </form>
                     </div>
                 </div>
