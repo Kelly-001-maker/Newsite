@@ -71,7 +71,12 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <div style="padding-left: 0px;"><span style="color:blue; font-size:30px" > Omagcrypto Investment</span></div>
+                <div style="padding-left: 0px;">
+                    <div class="myimages" style="float: left;" >
+                           <img src="images/omaglock.jpg" alt="image not found" height="50px">
+                   </div>
+                    <span style="font-size:30px" ><b>OMAGCRYPTO INVEST</b> </span>
+                </div>
                 </div>
                 <!-- End Header Navigation -->
 
@@ -258,6 +263,22 @@
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
     <!-- ALL JS FILES -->
+    <script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+</script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

@@ -3,6 +3,30 @@
 <!-- Basic -->
 
 <head>
+    <style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -10,15 +34,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>Omagcrypto Investment</title>
+    <title>Omagcrypto investment</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Site Icons -->
     <link rel="shortcut icon" href="images/mybit.png" type="image/x-icon">
     <link rel="mybit" href="images/mybit.png">
-
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -38,7 +62,7 @@
 
 <body>
 
-     <!-- Start Main Top -->
+    <!-- Start Main Top -->
     <div class="main-top">
         <div class="container-fluid">
             <div class="row">
@@ -70,15 +94,15 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <div style="padding-left: 0px;">
-                    <div class="myimages" style="float: left;" >
+                	<div class="myimages" style="float: left;" >
                            <img src="images/omaglock.jpg" alt="image not found" height="50px">
                    </div>
-                    <span style="font-size:30px" ><b>OMAGCRYPTO INVEST</b> </span>
+                	<span style="font-size:30px" ><b>OMAGCRYPTO INVEST</b> </span>
                 </div>
                 </div>
                 <!-- End Header Navigation -->
 
-              <!-- Collect the nav links, forms, and other content for toggling -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="index.html"><i class="fa fa-home" arial-hidden="true"></i>Home</a></li>
@@ -90,7 +114,7 @@
                         <li class="nav-item"><a class="nav-link" href="contact_us.html"><i class="fa fa-phone" arial-hidden="true"></i>Contacts Us</a></li>
                         <li class="nav-item" style="padding-top: 30px;">
                             <span>  
-                              <span class ="button" style="margin-left: 20px;"><a href="loginquiz.html">Login</a></span>
+                              <span class ="button" style="margin-left: 20px;"><a href="login.html">Login</a></span>
                              <span class ="button" style="margin-left: 20px;"><a href="registration.html">sign up</a></span>
                           </span>
                         </li>
@@ -125,88 +149,92 @@
         </div>
     </div>
     <!-- End Top Search -->
-        <!-- Start All Title Box -->
+      <!-- Start of title box -->
     <div class="all-title-box">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Contact Us</h2>
+                    <h2>ADMIN</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active"> Contact Us </li>
+                        <li class="breadcrumb-item active">ADMIN</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     <!-- End All Title Box -->
-
-    <!-- Start Contact Us  -->
-    <div class="contact-box-main">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-sm-12">
-                    <div class="contact-info-left">
-                        <h2>CONTACT INFO</h2>
-                        <p>Feel free to contact us with any questions. We are available to point you in the right direction and answer questions. </p>
-                        <ul>
-                            <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Address: Mike makwani I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
-                            </li>
-                            <li>
-                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
-                            </li>
-                            <li>
-                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactomagcryptoinfo@gmail.com">contactomagcryptoinfo@gmail.com</a></p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-sm-12">
-                    <div class="contact-form-right">
-                        <h2>GET IN TOUCH</h2>
-                        <p>
-                        If you need advice or technical assistance, do not hesitate to contact our specialists. You just need to send a letter or a request via the feedback form..</p>
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="subject" name="name" placeholder="Subject" required data-error="Please enter your Subject">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <textarea class="form-control" id="message" placeholder="Your Message" rows="4" data-error="Write your message" required></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                    <div class="submit-button text-center">
-                                        <button class="btn hvr-hover" id="submit" type="submit">Send Message</button>
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End contact us-->
-
+<div style="margin-top: 20px;"> <center><h2>Investors</h2></center></div>
+<div style="margin: 20px;">
+    <table id="customers">
+  <tr>
+    <th>USERNAME</th>
+    <th>COUNTRY</th>
+    <th>AMOUNT INVESTED</th>
+    <th>MATURITY DATE</th>
+  </tr>
+  <tr>
+    <td>Alfreds </td>
+    <td>KEnya</td>
+    <td>$100</td>
+    <td>12/3/20222</td>
+  </tr>
+  <tr>
+    <td>Berglunds otis</td>
+    <td>UGANDA</td>
+    <td>$600</td>
+    <td>7/9/2026</td>
+  </tr>
+  <tr>
+    <td> Moctezuma</td>
+    <td>Mexico</td>
+    <td>20,000</td>
+     <td>12/3/20222</td> 
+     </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Austria</td>
+    <td>$5,000</td>
+    <td>12/3/20222</td>
+  </tr>
+  <tr>
+    <td>dkay sylencer</td>
+    <td>UK</td>
+    <td>$400</td>
+    <td>12/3/20222</td>
+  </tr>
+  <tr>
+    <td>Königlich Essen</td>
+    <td>Germany</td>
+    <td>$20,000</td>
+     <td>12/3/20222</td>
+       </tr>
+  <tr>
+    <td>Bacchus Winecellars</td>
+    <td>Canada</td>
+    <td>$50,000</td>
+     <td>12/3/20222</td>
+  </tr>
+  <tr>
+    <td> Alimentari Riuniti</td>
+    <td>Italy</td>
+    <td>$600</td>
+     <td>12/3/20222</td>
+  </tr>
+  <tr>
+    <td>debii designer</td>
+    <td>South Africa</td>
+    <td>$100,000</td>
+     <td>12/3/20222</td>
+  </tr>
+  <tr>
+    <td>dagras dude</td>
+    <td>France</td>
+    <td>$1000</td>
+     <td>12/3/20222</td>
+  </tr>
+</table>
+</div>
  
 
  <!-- Start Footer  -->
@@ -220,8 +248,7 @@
                               <p>
                              Omagcrypto invests is a registered investment platform providing digital asset investment management services to individuals. We are specialized in wealth management and value added investments.
 
-                              </p>  
-                            <ul>
+                              </p>                            <ul>
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
