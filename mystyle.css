@@ -111,8 +111,7 @@ background-repeat: no-repeat;
         
 }
 .loginbox{
-    width: 320px;
-    height: 420px;
+    width: 80%;
     background: #000;
     color: #fff;
     top: 50%;
