@@ -4,20 +4,21 @@
 <html lang="en" and dir="Itr">
 <head>
     <script>
-        function passvalues()
+        function validate()
         {
-            var user = document.getElementById("txt").value;
-            var pass = document.getElementById("txt").value;
+            var user = document.getElementById("myuser").value;
+            var pass = document.getElementById("mypass").value;
             localStorage.setItem("uservalue",user);
             localStorage.setItem("passvalue",pass);
-              if (user=="admin"&& pass =="admin") 
+              if (user=="adminboss"&& pass =="admin001") 
 	       {
 		        alert("Login succesfull");
 		        
 	        }
 	        else
 	        {
-		       alert("login failed");
+		       alert("login failed, wrong username or password");
+               document.getElementById("myform").action = "adminlogin.html";
 	        }
           return false;
         }
@@ -29,12 +30,12 @@
     <div style="background:grey;">   
            <div class="loginbox">
         <h1>Admin login</h1>
-         <form action = "admin.html">
+         <form action = "admin.html" id="myform">
             <p>Username</p>
-            <input type="text" id="user" required/  name="" placeholder="Enter Username">
+            <input type="text" id="myuser" required/  name="" placeholder="Enter Username">
             <p>Password</p>
-            <input type="password" required/ required/ name="" placeholder="Enter Password">
-            <input type="submit" name="" value="Login" onclick="passvalues();"><br>
+            <input type="password" id="mypass" required/ required/ name="" placeholder="Enter Password">
+            <input type="submit" name="" value="Login" onclick="validate();"><br>
             <a href="#">Can't Recall Your Password?</a><br>
             <a href="#">Don't Have An Account?</a>
         </form>
