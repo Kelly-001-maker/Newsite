@@ -21,6 +21,17 @@
            alert("registration failed, password does not much");
                document.getElementById("myformreg").action = "index.html";
           }
+
+      var text = "http://Omagcryptoinevst-";
+      var i;
+      for (i = 0; i < 10; i++) 
+      {
+         var r_num =Math.floor(Math.random() * 25);
+         var convert = r_num + 65;
+          var res = String.fromCharCode(convert);
+         text +=res;
+      }
+      localStorage.setItem("myuniguelink", text);
           return false;
         }
     </script>

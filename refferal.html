@@ -186,9 +186,19 @@
         <div><p style="margin:20px;">Your unique reffaral link</p></div>
         <div>
             <div class="link">
-                https://www.omagcryptoinvest.com/signup.php
-                <p style="float: right"> <span style="margin-right: 10px"><a href="#"><span style="color:blue" >copy link</span></a></span></p>
-            </div>
+              <span id="myInput"> <span id="getlink"></span>/-<span id="myusenamenow"></span></span>
+                <script>
+                     document.getElementById("getlink").innerHTML=localStorage.getItem("myuniguelink");
+                     document.getElementById("myusenamenow").innerHTML=localStorage.getItem("textvalue");
+               </script>
+                <p style="float: right"> 
+                    <span style="margin-right: 10px">
+                        <span>
+                            <button style="border: none; border-radius: 5px; cursor: pointer;" onclick="myFunction()">Copy link</button>
+                        </span>
+                    </span>
+                </p>
+            </div
             
         </div>
     </div>
@@ -261,20 +271,12 @@
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
     <!-- ALL JS FILES -->
-    <script>
+<script>
 function myFunction() {
   var copyText = document.getElementById("myInput");
   copyText.select();
-  copyText.setSelectionRange(0, 99999);
   document.execCommand("copy");
-  
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copied: " + copyText.value;
-}
-
-function outFunc() {
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copy to clipboard";
+  alert("Copied the text: " + copyText.value);
 }
 </script>
     <script src="js/jquery-3.2.1.min.js"></script>
