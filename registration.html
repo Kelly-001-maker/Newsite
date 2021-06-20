@@ -6,23 +6,16 @@
         {
             var my_username = document.getElementById("usernameval").value;
             localStorage.setItem("my_username_value",my_username);
+            var my_email = document.getElementById("email").value;
+            localStorage.setItem("my_email_value",my_email);
+            var my_country = document.getElementById("country").value;
+            localStorage.setItem("my_country_value",my_country);
             localStorage.checkuser = my_username;
             var firstpwd = document.getElementById("fpwd").value;
             localStorage.setItem("mypasswordvalue",firstpwd);
             var confirmpwd = document.getElementById("conpwd").value;
             localStorage.setItem("confirmpasswordvalue",confirmpwd);
-          if (firstpwd==confirmpwd) 
-         {
-            alert("registration succesfull");
-            
-          }
-          else
-          {
-           alert("registration failed, password does not much");
-               document.getElementById("myformreg").action = "index.html";
-          }
-
-      var text = "http://Omagcryptoinevst-";
+             var text = "http://Omagcryptoinevst-";
       var i;
       for (i = 0; i < 10; i++) 
       {
@@ -32,6 +25,19 @@
          text +=res;
       }
       localStorage.setItem("myuniguelink", text);
+          if (firstpwd==confirmpwd) 
+         {
+            alert("registration succesfull");
+            document.getElementById("myformreg").action = "login.html";
+            
+          }
+          else
+          {
+           alert("registration failed, password does not much");
+            document.getElementById("myformreg").action = "registration.html";
+          }
+
+     
           return false;
         }
     </script>
@@ -52,7 +58,7 @@
   <div><h1 class="space" style="color:green">Welcome to Omagcrypto</h1></div>
   <div><h5 class="space">Enter your details below</h5></div>
   <div class="formdiv">
-   <form action="login.html" class="myformreg">
+   <form class="myformreg">
      <label for="fname">First name:</label><br>
      <input type="text" id="fname" name="fname" placeholder="Enter First name" required=""><br>
      <label for="mname">Middle name:</label><br>
@@ -65,14 +71,14 @@
      <input type="email"  id="email" name="email" placeholder="Enter email adress"><br>
      <label for="country">Select country:</label><br>
      <select name="country" id="country">
-        <option value="country" selected>Kenya</option>
-        <option value="country">Uganda</option>
-        <option value="country">Tanzania</option>
-        <option value="country">Ethiopia</option>
-        <option value="country">Somalia</option>
-        <option value="country">Sudan</option>
-        <option value="country">South Sudan</option>
-        <option value="country">Rwanda</option>
+        <option value="Kenya" selected>Kenya</option>
+        <option value="Uganda">Uganda</option>
+        <option value="Tanzania">Tanzania</option>
+        <option value="Ethiopia">Ethiopia</option>
+        <option value="Somalia">Somalia</option>
+        <option value="Sudan">Sudan</option>
+        <option value="South_Sudan">South Sudan</option>
+        <option value="Rwanda">Rwanda</option>
      </select><br>
      <label for="username">Username:</label><br>
      <input type="text" id="usernameval" name="username" placeholder="Enter Username"><br>
