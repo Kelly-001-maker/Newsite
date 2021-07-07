@@ -32,25 +32,32 @@ function submitForm(e)
     var dob = document.getElementById('dob').value;
     var psw = document.getElementById('psw').value;
     var psw_repeat = document.getElementById('psw_repeat').value;
-    if (psw!=psw_repeat) 
-    {
-      alert("registration failed, password does not match");
-      window.location.href = "index1.html"; 
-    }
-
+  
     // save the details now by calling savedetails function
-    savedetails(firstname, middlename,lastname, username, email, country, dob, psw);
+    if (psw==psw_repeat) 
+    {
+       //save the details to database
+       savedetails(firstname, middlename,lastname, username, email, country, dob, psw);
+       //clear form
+       document.getElementById("contactform").reset();
+       // show alert
+       alert("you have succesfully created an account proceed to login");
+       window.location.href = "login.html";
+       
+     }
+     else
+     {
+      alert("registration failed, password does not much");
+      window.location.href = "index1.html";
+      // document.getElementById("myformreg").action = "registration.html";
+     }
     //Show alert
-    document.querySelector('.alert').style.display = 'block';
-    //alert("registration succeccesfull, proceed to login");
-    
-    
-    //hide alert after 3 seconds
-    setTimeout(function(){
-      document.querySelector('.alert').style.display = 'none';
-   }, 6000);
-   document.getElementById("contactform").reset();
-  // window.location.href = "login.html"; 
+    //document.querySelector('.alert').style.display = 'block';
+
+    // hide alert after 3 seconds
+    //setTimeout(function(){
+      //document.querySelector('.alert').style.display = 'none';
+   // }, 5000);
 }
 
 

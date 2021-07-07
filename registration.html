@@ -1,102 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <script>
-        function validate()
-        {
-            var my_username = document.getElementById("usernameval").value;
-            localStorage.setItem("my_username_value",my_username);
-            var my_email = document.getElementById("email").value;
-            localStorage.setItem("my_email_value",my_email);
-            var my_country = document.getElementById("country").value;
-            localStorage.setItem("my_country_value",my_country);
-            localStorage.checkuser = my_username;
-            var firstpwd = document.getElementById("fpwd").value;
-            localStorage.setItem("mypasswordvalue",firstpwd);
-            var confirmpwd = document.getElementById("conpwd").value;
-            localStorage.setItem("confirmpasswordvalue",confirmpwd);
-             var text = "http://Omagcryptoinevst-";
-      var i;
-      for (i = 0; i < 10; i++) 
-      {
-         var r_num =Math.floor(Math.random() * 25);
-         var convert = r_num + 65;
-          var res = String.fromCharCode(convert);
-         text +=res;
-      }
-      localStorage.setItem("myuniguelink", text);
-          if (firstpwd==confirmpwd) 
-         {
-            alert("registration succesfull");
-            document.getElementById("myformreg").action = "login.html";
-            
-          }
-          else
-          {
-           alert("registration failed, password does not much");
-            document.getElementById("myformreg").action = "registration.html";
-          }
-
-     
-          return false;
-        }
-    </script>
-    <link rel="stylesheet" href="mystyle.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omag crypto investment</title>
-
+    <title>My registration</title>
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: black;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        /* Add padding to containers */
+        .container {
+          padding: 16px;
+          background-color: white;
+        }
+        /* alert*/
+        .alert{
+          text-align: center;
+          padding: 10px;
+          background: #79c879;
+          color: #fff;
+          margin-bottom: 10px;
+          width: 70%;
+          display: none;
+        }
+        /* Full-width input fields */
+        input[type=text], input[type=email], input[type=date], input[type=password] {
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          display: inline-block;
+          border: none;
+          background: #f1f1f1;
+        }
+        
+        input[type=text]:focus, input[type=email]:focus, input[type=date]:focus, input[type=password]:focus {
+          background-color: #ddd;
+          outline: none;
+        }
+        
+        /* Overwrite default styles of hr */
+        hr {
+          border: 1px solid #f1f1f1;
+          margin-bottom: 25px;
+        }
+        
+        /* Set a style for the submit button */
+        .registerbtn {
+          background-color: #04AA6D;
+          color: white;
+          padding: 16px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          opacity: 0.9;
+        }
+        
+        .registerbtn:hover {
+          opacity: 1;
+        }
+        
+        /* Add a blue text color to links */
+        a {
+          color: dodgerblue;
+        }
+        
+        /* Set a grey background color and center the text of the "sign in" section */
+        .signin {
+          background-color: #f1f1f1;
+          text-align: center;
+        }
+        </style>
 </head>
-<body class="formbody">
-  <div class="header">
+<body>
+    
+    <form id="contactform">
+        <div class="container">
+          <h1>Register Here</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+          <label for="firstname"><b>Firstname</b></label>
+          <input type="text" placeholder="Enter Firstname" name="firstname" id="firstname" required>
 
-     <h1>Omagcrypto Investment</h1>
-  
-  </div>
-  <div><h1 class="space" style="color:green">Welcome to Omagcrypto</h1></div>
-  <div><h5 class="space">Enter your details below</h5></div>
-  <div class="formdiv">
-   <form class="myformreg">
-     <label for="fname">First name:</label><br>
-     <input type="text" id="fname" name="fname" placeholder="Enter First name" required=""><br>
-     <label for="mname">Middle name:</label><br>
-     <input type="text" id="mname" name="mname" placeholder="Enter Middle name" required=""><br>
-     <label for="lname">Last name:</label><br>
-     <input type="text" id="lname" name="lname" placeholder="Enter Last name" required=""><br>
-     <label for="mname">Birth Date:</label><br>
-     <input type="date" id="dob" name="dob" placeholder="Enter D.O.B" required=""><br>
-     <label for="mname">Email address:</label><br>
-     <input type="email"  id="email" name="email" placeholder="Enter email adress"><br>
-     <label for="country">Select country:</label><br>
-     <select name="country" id="country">
-        <option value="Kenya" selected>Kenya</option>
-        <option value="Uganda">Uganda</option>
-        <option value="Tanzania">Tanzania</option>
-        <option value="Ethiopia">Ethiopia</option>
-        <option value="Somalia">Somalia</option>
-        <option value="Sudan">Sudan</option>
-        <option value="South_Sudan">South Sudan</option>
-        <option value="Rwanda">Rwanda</option>
-     </select><br>
-     <label for="username">Username:</label><br>
-     <input type="text" id="usernameval" name="username" placeholder="Enter Username"><br>
-     <label for="pwd">Password:</label><br>
-     <input type="password" id="fpwd" name="pwd" placeholder="Enter Password"><br>
-     <label for="pwd">Confirm Password:</label><br>
-     <input type="password" id="conpwd" name="pwd" placeholder="Confirm Password"><br><br>
-     <input type="checkbox" id="policy" name="policy" value="policy">
-     <label for="policy" class="checkb">I have read and agree to the <a href="privacy_policy.html" class="checklink">Privacy Policy</a> Agreement</label><br><br>
-      <input type="checkbox" id="terms" name="terms" value="terms">
-     <label for="terms" class="checkb">I have read and agree to the <a href="Terms_and_conditions.html" class="checklink">terms and condition</a> agreement</label><br><br>
-     <input type="submit" value="Sign Up" onclick="validate()"><br><br>
-     <label>Already have an account <a href="login.html" class="button">Login</a></label>
-    </form> 
-  </div>
-  <div class="footer">
-  <p style="color:white">All Rights Reserved </p>
-  <p style="color:white">@omagcrypto2021</p>
-</div>
+          <label for="lastname"><b>Middlename</b></label>
+          <input type="text" placeholder="Enter middlename" name="middlename" id="middlename" required>
+          <label for="lastname"><b>Lastname</b></label>
+          <input type="text" placeholder="Enter lastname" name="lastname" id="lastname" required>
+           
+          <label for="email"><b>Email</b></label>
+          <input type="email" placeholder="Enter Email" name="email" id="email" required>
+          
+          <label for="country"><b>Country</b></label>
+          <input type="text" placeholder="Enter country" name="country" id="country" required>
+          
+          <label for="dob"><b>Date Of Birth</b></label>
+          <input type="date" placeholder="Enter Date of Birth" name="dob" id="dob" required>
+
+          <center><div class="alert">Your details have been saved, proceed to login</div></center>
+
+          <label for="username"><b>Username</b></label>
+          <input type="text" placeholder="Enter username" name="username" id="username" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+      
+          <label for="psw_repeat"><b>Confirm Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw_repeat" id="psw_repeat" required>
+          <hr>
+          <p>By creating an account you agree to our <a href="Terms_and_conditions.html">Terms & Condions</a> and  <a href="privacy_policy.html">Privacy Policy Agreement</a>.</p>
+      
+          <button type="submit" class="registerbtn">Register</button>
+        </div>
+        
+        <div class="container signin">
+          <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+        </div>
+      </form>
+    
+      <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+      <script src="main.js"></script>
 </body>
 </html>

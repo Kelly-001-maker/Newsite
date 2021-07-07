@@ -1,0 +1,34 @@
+<html>
+<head>
+    <script>
+        function passvalues()
+        {
+            var firstname = document.getElementById("txt").value;
+            localStorage.setItem("textvalue",firstname);
+            return false;
+        }
+    </script>
+
+<title> Login Form Design </title>
+     <link rel="stylesheet" type="text/css" href="mystyle.css">
+<body>
+    <div style="background:grey;">   
+           <div class="loginbox">
+        <h1>Login Here</h1>
+         <form action = "my_account.html">
+            <p>Username</p>
+            <input type="text" id="txt" maxlength="14"  minlength="7" required/  name="" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" maxlength="10"  minlength="5" required/ required/ name="" placeholder="Enter Password">
+            <input type="submit" name="" value="Login" onclick="passvalues();"><br>
+            <a href="#">Can't Recall Your Password?</a><br>
+            <a href="#">Don't Have An Account?</a>
+        </form>
+        
+    </div>
+ </div>
+
+</div>
+</body>   
+</head>
+</html>
