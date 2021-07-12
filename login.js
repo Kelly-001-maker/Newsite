@@ -85,7 +85,7 @@ function gotdata(data)
       if (passcorrect == 1)
       {
           alert(success_message);
-          window.location.href = "mydata.html";
+          window.location.href = "my_account.html";
           //document.getElementById("contactform").action = "index1.html";
       }
       else
