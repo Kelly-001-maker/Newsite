@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    function passvalues()
+    {
+        var firstname = document.getElementById("username").value;
+        localStorage.setItem("textvalue",firstname);
+        return false;
+    }
+</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,7 +105,7 @@
           <hr>
          
       
-          <button type="submit" class="registerbtn">login</button>
+          <button type="submit" class="registerbtn" onclick="passvalues()">login</button>
         </div>
         
         <div class="container signin">
