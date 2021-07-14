@@ -35,28 +35,28 @@ function submitForm(e)
     if (psw!=psw_repeat) 
     {
       alert("registration failed, password does not match");
-      window.location.href = "index1.html"; 
+      window.location.href = "registration.html"; 
     }
+    // call for a function to check whether a username exists
+    retriveinfo();
+    //Function to generate a unique link
+    function generate_ref_link()
+    { 
+      var unique_ref_link = "http://Omagcryptoinevst-";
+      var i;
+      for (i = 0; i < 10; i++) 
+      {
+        var r_num =Math.floor(Math.random() * 25);
+        var convert = r_num + 65;
+        var res = String.fromCharCode(convert);
+        unique_ref_link +=res;
+      }
+      unique_ref_link +="/";
+      unique_ref_link += username;
 
-     //Function to generate a unique link
-     function generate_ref_link()
-     { 
-       var unique_ref_link = "http://Omagcryptoinevst-";
-       var i;
-       for (i = 0; i < 10; i++) 
-       {
-         var r_num =Math.floor(Math.random() * 25);
-         var convert = r_num + 65;
-         var res = String.fromCharCode(convert);
-         unique_ref_link +=res;
-       }
-       unique_ref_link +="/";
-       unique_ref_link += username;
- 
-       return unique_ref_link;
-     }
-     var refferal_link = generate_ref_link();
-
+      return unique_ref_link;
+    }
+    var refferal_link = generate_ref_link();
     // save the details now by calling savedetails function
     savedetails(firstname, middlename,lastname, username, email, country, dob, psw, refferal_link);
     //Show alert
@@ -88,43 +88,4 @@ function savedetails(firstname, middlename, lastname, username, email, country, 
        psw: psw,
        refferal_link: refferal_link
    });
-   //retriveinfo();
-}
-
-// retrieving data from the database
-
-function retriveinfo()
-{
-  var ref = firebase.database().ref('registers');
-  ref.on('value', gotdata);
-}
-
-
-//defining the function now
-
-function gotdata(data)
-{
-  //console.log(data.val());
-  var info = data.val();
-  var keys = Object.keys(info);
-  //console.log(keys);
-
-  for ( var i = 0; i < keys.length; i++)
-  {
-    var j = keys[i];
-    //console.log(j)
-    var firstname = info[j].firstname;
-    var middlename = info[j].middlename;
-    var lastname = info[j].lastname;
-    var username = info[j].username;
-    var email = info[j].email; 
-    var country = info[j].country;
-    var dob = info[j].dob;
-    var psw = info[j].psw;
-    //console.log(firstname, lastname, username, email);
-    //var li = document.createElement('li', firstname +'  '+lastname+'  '+username);
-   // li.parent('userslist');
-   //document.getElementById("userslist").innerHTML += firstname +"  " +middlename+"  " +lastname+"  " +username+ "  " +email+ "  " +country+"  " +dob+ "  " +psw+"<br />";
-   
-  }
 }

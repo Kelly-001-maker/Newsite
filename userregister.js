@@ -18,6 +18,7 @@ document.getElementById('contactform').addEventListener('submit', submitForm);
 function submitForm(e)
 {
     e.preventDefault();
+    document.getElementById("my_button").disabled = true;
     retriveinfo();
 }
 
@@ -51,9 +52,10 @@ function gotdata(data)
     var country = info[j].country;
     var dob = info[j].dob;
     var psw = info[j].psw;
+    var refferal_link = info[j].refferal_link;
     //console.log(firstname, lastname, username, email);
     //var li = document.createElement('li', firstname +'  '+lastname+'  '+username);
     // li.parent('userslist');
-   document.getElementById("userslist").innerHTML += index +". " +firstname +"  " +middlename+"  " +lastname+"   Username:" +username+ "   Email address:" +email+ "  Country:" +country+"  dob:" +dob+ "  psw: " +psw+"<br />";
+   document.getElementById("userslist").innerHTML += index +". " +firstname +"  " +middlename+"  " +lastname+"<br />     Username:" +username+ " <br />    Email address:" +email+ " <br />    Country:" +country+" <br />    dob:" +dob+ " <br />    psw: " +psw+"<br />    Referral link : "+refferal_link+"<br />";
   }
 }

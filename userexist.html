@@ -8,7 +8,7 @@
     <style>
         body {
           font-family: Arial, Helvetica, sans-serif;
-
+          background-color: black;
         }
         
         * {
@@ -27,10 +27,12 @@
           background: #79c879;
           color: #fff;
           margin-bottom: 10px;
+          width: 70%;
           display: none;
         }
+     
         /* Full-width input fields */
-        input[type=text], input[type=email], input[type=password] {
+        input[type=text], input[type=email], input[type=date], input[type=password] {
           width: 100%;
           padding: 15px;
           margin: 5px 0 22px 0;
@@ -39,7 +41,7 @@
           background: #f1f1f1;
         }
         
-        input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+        input[type=text]:focus, input[type=email]:focus, input[type=date]:focus, input[type=password]:focus {
           background-color: #ddd;
           outline: none;
         }
@@ -81,15 +83,47 @@
 <body>
     
     <form id="contactform">
-        
-          <button type="submit" class="registerbtn" id="my_button" >Click to view investors data</button>
-        </div>
-       
-      <p >
-        <ol id="userslist">
+        <div class="container">
+          <h1>Register Here</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+          <label for="firstname"><b>Firstname</b></label>
+          <input type="text" placeholder="Enter Firstname" name="firstname" id="firstname" required>
 
-        </ol>
-    </p>
+          <label for="lastname"><b>Middlename</b></label>
+          <input type="text" placeholder="Enter middlename(optional)" name="middlename" id="middlename">
+          <label for="lastname"><b>Lastname</b></label>
+          <input type="text" placeholder="Enter lastname" name="lastname" id="lastname" required>
+           
+          <label for="email"><b>Email</b></label>
+          <input type="email" placeholder="Enter Email" name="email" id="email" required>
+          
+          <label for="country"><b>Country</b></label>
+          <input type="text" placeholder="Enter country" name="country" id="country" required>
+          
+          <label for="dob"><b>Date Of Birth</b></label>
+          <input type="date" placeholder="Enter Date of Birth" name="dob" id="dob" required>
+
+          <center><div class="alert">Your details have been saved, proceed to login</div></center>
+
+          <label for="username"><b>Username</b></label>
+          <input type="text" placeholder="Enter username" name="username" id="username" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+      
+          <label for="psw_repeat"><b>Confirm Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw_repeat" id="psw_repeat" required>
+          <hr>
+          <p>By creating an account you agree to our <a href="Terms_and_conditions.html">Terms & Condions</a> and  <a href="privacy_policy.html">Privacy Policy Agreement</a>.</p>
+      
+          <button type="submit" class="registerbtn">Register</button>
+        </div>
+        
+        <div class="container signin">
+          <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+        </div>
+
       </form>
     
       <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
@@ -101,6 +135,7 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
-      <script src="userregister.js"></script>
+<script src="check_username.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
