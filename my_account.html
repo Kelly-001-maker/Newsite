@@ -141,6 +141,10 @@
         document.getElementById("result").innerHTML=localStorage .getItem("textvalue");
     </script>
 </div>
+<div >
+    <h2>Your unique refferal link</h2>
+    <p id="unique_link"></p>
+</div>
 <div style="margin: 30px;"> <h2>You need to have a blockchain bitcoin wallet account.</h2></div>
 <div style="margin: 30px;"><h3>Please make sure you remember your wallet ID and password for login in</h3></div>
 <div style="margin: 30px;"><h4>To view your balances, you need to login in your blockcahin bitcoin wallet account</h4></div>
@@ -424,6 +428,16 @@
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+    
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+          <script src="login.js"></script>
 </body>
 
 </html>

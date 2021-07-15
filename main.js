@@ -32,6 +32,7 @@ function submitForm(e)
     var dob = document.getElementById('dob').value;
     var psw = document.getElementById('psw').value;
     var psw_repeat = document.getElementById('psw_repeat').value;
+    var referrer = document.getElementById('referrer').value;
     if (psw!=psw_repeat) 
     {
       alert("registration failed, password does not match");
@@ -58,7 +59,7 @@ function submitForm(e)
      var refferal_link = generate_ref_link();
 
     // save the details now by calling savedetails function
-    savedetails(firstname, middlename,lastname, username, email, country, dob, psw, refferal_link);
+    savedetails(firstname, middlename,lastname, username, email, country, dob, psw, refferal_link, referrer);
     //Show alert
     document.querySelector('.alert').style.display = 'block';
     //alert("registration succeccesfull, proceed to login");
@@ -74,7 +75,7 @@ function submitForm(e)
 
 
 // save messages to firebase
-function savedetails(firstname, middlename, lastname, username, email, country, dob, psw, refferal_link)
+function savedetails(firstname, middlename, lastname, username, email, country, dob, psw, refferal_link,referrer)
 {
    var newregistersRef = registerRef.push();
    newregistersRef.set({
@@ -86,7 +87,8 @@ function savedetails(firstname, middlename, lastname, username, email, country, 
        country: country,
        dob: dob,
        psw: psw,
-       refferal_link: refferal_link
+       refferal_link: refferal_link,
+       referrer: referrer
    });
    //retriveinfo();
 }

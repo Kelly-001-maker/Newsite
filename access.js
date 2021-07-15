@@ -14,17 +14,18 @@
   firebase.analytics();
 
 document.getElementById('contactform').addEventListener('submit', submitForm);
-var user_psw;
-var my_user;
+var local_username;
 function submitForm(e)
 {
     e.preventDefault();
+    document.getElementById("my_btnon").disabled = true;
    var registerRef = firebase.database().ref('registers');
     
-
+   local_username = localStorage.getItem("textvalue");
+   //console.log(local_username);
     // get values now
-    my_user = document.getElementById('username').value;
-    user_psw = document.getElementById('psw').value;
+   // my_user = document.getElementById('username').value;
+   // user_psw = document.getElementById('psw').value;
     
     retriveinfo();
 }
@@ -38,17 +39,6 @@ function retriveinfo()
 
 //defining the function now
 
-function confirmpassword(userpsw,databasepsw)
-{
-    var cond = 0;
-    if(userpsw==databasepsw)
-    {
-        cond=1;
-    }
-   return cond;
-}
-
-
 function gotdata(data)
 {
   //console.log(data.val());
@@ -57,50 +47,45 @@ function gotdata(data)
   //console.log(123456);
   //document.getElementById('userslist').value = "";
    //var index = 0;
-   var found = 0;
-   var passcorrect = 0;
+
    var refferal_link;
-   var mykey;
   for ( var i = 0; i < keys.length; i++)
   {
    var j = keys[i];
     //console.log(j)
     var username = info[j].username;
     var psw = info[j].psw;
-    if (my_user == username)
+    refferal_link = info[j].refferal_link;
+    if (local_username == username)
     {
-        found = 1;
-        if(psw == user_psw )
-        {
-            passcorrect = 1; 
-        }
-        //refferal_link = info[j].refferal_link;
+        console.log(refferal_link);
+        document.getElementById("hello_user").innerHTML = refferal_link;
         break;
     }
-    //document.getElementById("result").innerHTML = my_user;
-    //document.getElementById("unique_link").innerHTML = refferal_link;
   }
 
-  if(found == 1)
+  document.getElementById('refereal_head').innerHTML = "My referrals";
+  var index = 0;
+  var anyreffer = 0;
+  for ( var i = 0; i < keys.length; i++)
   {
-    var success_message = "login successfull."
-    var fail_message = "login failed, incorrect password"
-      if (passcorrect == 1)
-      {
-          alert(success_message);
-          window.location.href = "my_account.html";
-          //document.getElementById("contactform").action = "index1.html";
-      }
-      else
-      {
-          alert(fail_message);
-          window.location.href = "login.html";
-      }    
+    
+   var j = keys[i];
+    var username = info[j].username;
+    var email = info[j].email;
+    var referrer = info[j].referrer;
+    if (refferal_link == referrer)
+    {
+      anyreffer = 1;
+      index = index + 1;
+        document.getElementById("referal_list").innerHTML += index +".   Username: " +username+ "<br/>  Email: "+email+"<br/>";
+        
+    }
   }
-  else
+  if (anyreffer == 0)
   {
-    var message = " login failed, the username does  not exist."
-    alert(message);
-    window.location.href = "login.html";
+    document.getElementById("referal_list").innerHTML = "You dont have refferals Yet"
   }
+  document.getElementById("total_refferal").innerHTML = index; 
 }
+

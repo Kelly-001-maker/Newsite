@@ -152,7 +152,7 @@
                                                          
                             <div style="padding-top: 10px;">
                                <h3 style="padding-left: 20px; color: blue;">Total Refferals</h3>
-                               <h1 style="padding-left: 20px;">0</h1>
+                               <h1 style="padding-left: 20px;" id="total_refferal"></h1>
                             </div>
                          </div>
                       </div>
@@ -182,26 +182,30 @@
                       </div>
              </div>
         </div>
-    <div class="mylink">
-        <div><p style="margin:20px;">Your unique reffaral link</p></div>
-        <div>
-            <div class="link">
-              <span id="myInput"> <span id="getlink"></span>/-<span id="myusenamenow"></span></span>
-                <script>
-                     document.getElementById("getlink").innerHTML=localStorage.getItem("myuniguelink");
-                     document.getElementById("myusenamenow").innerHTML=localStorage.getItem("textvalue");
-               </script>
-                <p style="float: right"> 
-                    <span style="margin-right: 10px">
-                        <span>
-                            <button style="border: none; border-radius: 5px; cursor: pointer;" onclick="myFunction()">Copy link</button>
-                        </span>
-                    </span>
-                </p>
-            </div
-            
+
+    <div class="row">
+        <div class="col-lg-6" style="padding: 20px;">
+            <form id="contactform" style="margin-left: 30px;">
+                <button type="submit" class="button" id="my_btnon" >click to view your link and all your refferals</button>
+                <div class="link">
+                    <p id="hello_user"></p>             
+                  </div>
+                
+            </form>
+                 
         </div>
-    </div>
+
+       <div class="col-lg-6" style="padding: 20px;">
+        
+          <h1 id="refereal_head" style="margin-left: 30px;"></h1> 
+         
+         <p style="margin-left: 30px;">
+           <ol id="referal_list">
+  
+           </ol>
+        </p>
+     </div>
+</div>
     <!-- End My Account -->
 
  
@@ -294,6 +298,16 @@ function myFunction() {
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+    
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+          <script src="access.js"></script>
 </body>
 
 </html>
